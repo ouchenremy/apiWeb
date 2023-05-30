@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="200" prefWidth="300" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet_javafx.ModifierCle">
+   <children>
+      <Label layoutX="24.0" layoutY="89.0" text="Nouvelle couleur de clé" />
+      <Label layoutX="21.0" layoutY="136.0" text="Nouveau libelle de la clé" />
+      <TextField fx:id="newCouleurCle" layoutX="170.0" layoutY="85.0" />
+      <TextField fx:id="newLibelleCle" layoutX="170.0" layoutY="132.0" />
+      <Button layoutX="274.0" layoutY="251.0" mnemonicParsing="false" onAction="#actionConfirmer" text="Confirmer" fx:id="btnConfirmer"/>
+      <Button layoutY="251.0" mnemonicParsing="false" text="Quitter" onAction="#actionQuitter"/>
+   </children>
+</AnchorPane>

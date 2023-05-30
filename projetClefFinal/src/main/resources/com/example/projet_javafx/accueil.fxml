@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="1280" prefWidth="720" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet_javafx.AccueilController">
+    <children>
+        <VBox fx:id="VBoxMain" alignment="CENTER" prefHeight="1280" prefWidth="720" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0">
+            <children>
+                <ChoiceBox fx:id="choixRecherche" layoutX="16.0" layoutY="52.0" prefWidth="150.0" value="Numéro">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Numéro" />
+                            <String fx:value="Couleur" />
+                            <String fx:value="Nom" />
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+            <TextField fx:id="zoneRecherche" />
+            <Button fx:id="btnRecherche" mnemonicParsing="false" onAction="#actionRechercher" text="Rechercher" />
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="437.0" rotate="1.3" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+              </items>
+            </SplitPane>
+                <ListView fx:id="listBoxCle" prefHeight="464.0" prefWidth="440.0" />
+                <HBox id="HBox" fx:id="HBox4Btns" alignment="CENTER" spacing="5.0" />
+            <Button fx:id="btnModifier" mnemonicParsing="false" onAction="#modifierAction" text="Modifier" />
+            <Button mnemonicParsing="false" text="Raffraichir la liste" onAction="#actionRaffraichir"/>
+            </children>
+        </VBox>
+            <Button fx:id="BtnDelete" layoutX="460.0" layoutY="440.0" mnemonicParsing="false" onAction="#supprimerAction" prefHeight="25.0" prefWidth="79.0" text="Supprimer" />
+            <Button fx:id="BtnAdd" layoutX="388.0" layoutY="440.0" mnemonicParsing="false" onAction="#ajouterAction" text="Ajouter" />
+    </children>
+</AnchorPane>
